@@ -73,9 +73,9 @@ def adjust_results4_isadog(results_dic, dogfile):
             all_dogs.append(line.rstrip().lower())
 
     for key, value in results_dic.items():
-        index_3 = int(value[0] in all_dogs)
-        index_4 = int(
-            any(label.strip().lower() in all_dogs for label in value[1].split(","))
-            in all_dogs
-        )
+        index_3 = int(value[0].lower() in all_dogs)
+        
+        index_4 = int(any(label.strip().lower() in all_dogs 
+                         for label in value[1].split(',')))
+        
         value.extend([index_3, index_4])

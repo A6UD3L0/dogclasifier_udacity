@@ -45,8 +45,7 @@ def main():
 
     # TODO 1: Define get_input_args function within the file get_input_args.py
     # This function retrieves 3 Command Line Arugments from user as input from
-    # the user running the program from a terminal window. This function returns
-    # the collection of these command line arguments from the function call as
+    # the user running the program from a terminal window. This function returns the collection of these command line arguments from the function call as
     # the variable in_arg
     in_arg = get_input_args()
 
@@ -61,6 +60,8 @@ def main():
     # This function creates the results dictionary that contains the results,
     # this dictionary is returned from the function call as the variable results
     results = get_pet_labels(in_arg.dir)
+
+    print(results)
 
     # Function that checks Pet Images in the results Dictionary using results
     check_creating_pet_image_labels(results)
@@ -109,13 +110,13 @@ def main():
     #      print_results(results, results_stats, in_arg.arch, True, True)
     # Prints summary results, incorrect classifications of dogs (if requested)
     # and incorrectly classified breeds (if requested)
-    print_results(results, results_stats, None, True, True)
+    print_results(results, results_stats, in_arg.arch, True, True)
 
     # TODO 0: Measure total program runtime by collecting end time
     end_time = time()
 
     # TODO 0: Computes overall runtime in seconds & prints it in hh:mm:ss format
-    tot_time = start_time - end_time
+    tot_time = end_time - start_time
 
     print(
         "\n** Total Elapsed Runtime:",

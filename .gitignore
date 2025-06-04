@@ -1,2 +1,8 @@
 pet_images/
 uploaded_images/
+__pycache__/
+check_images.txt
+.venv/
+*.json 
+pet_images/
+*.jpg
